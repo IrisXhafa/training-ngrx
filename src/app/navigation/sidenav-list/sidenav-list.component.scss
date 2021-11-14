@@ -1,0 +1,9 @@
+.menu-links{
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover, &:active{
+            color: rgb(87, 87, 87);
+        }
+    }
+}

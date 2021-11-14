@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "training-8341e": {
+      "hosting": {
+        "trainning-app": [
+          "training-8341e"
+        ]
+      }
+    }
+  }
+}

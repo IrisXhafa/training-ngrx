@@ -1,0 +1,18 @@
+<div class="form-container">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" [formGroup]="registerForm" (submit)="onSubmit()">
+        <mat-form-field>
+            <input matInput placeholder="email" type="email" email required formControlName="email"/>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput matHint="Must be 6 characters long" #pass placeholder="password" type="password" required formControlName="password"/>
+            <mat-hint align="end">{{pass.value?.length}}/6 </mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Birthday" [matDatepicker]="datepicker" formControlName="date"/>
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker></mat-datepicker>
+        </mat-form-field>
+        <mat-checkbox  formControlName="agree">Agree to Terms and Conditions</mat-checkbox>
+        <button mat-raised-button type="submit" color="primary" [disabled]="registerForm?.invalid">Sign up</button>
+    </form>
+</div>
